@@ -36,6 +36,28 @@
 
 	<body>
 
+	<script type="text/javascript">
+	
+		$(document).ready(function(){
+			Reveal.addEventListener( 'slidechanged', function( event ) {
+				// event.previousSlide, event.currentSlide, event.indexh, event.indexv
+				var recSlide = event.currentSlide;
+
+				// check if is youtube url is inside slide and save youtubeID, prevent reloading checking videoframe
+				if( ($(recSlide).find('.videoyt').length != 0) && ($(recSlide).find('.videoframe').html()=='') ) {
+					ytid = $(recSlide).find('.videoyt').attr('data-youtube');
+					// replace a.videoyt with video embed code
+					$(recSlide).find('.videoframe').html('<iframe width="640" height="480" src="http://www.youtube.com/embed/'+ytid+'?wmode=opaque&amp;rel=0&amp;vq=large" frameborder="0" allowfullscreen></iframe>');
+					// &iv_load_policy=<3></3>
+					// give anchor with videoid a correct link
+					$(recSlide).find('.videoyt').attr('href', 'http://www.youtube.com/watch?v='+ytid);
+					$(recSlide).find('.videoyt').attr('target', '_blank');
+				}
+			});
+		});
+		
+	</script>
+
 		<div class="reveal">
 
 			<!-- Any section element inside of this container is displayed as a slide -->
@@ -52,10 +74,10 @@
 				<h1>Background Info</h1>
 			</section>
 			<section>
-<iframe width="854" height="510" src="https://www.youtube.com/embed/HhUays2ehyI" frameborder="0" allowfullscreen></iframe>
+<a class="videoyt" data-youtube="HhUays2ehyI">Youtube-Link</a>
 			</section>
 			<section>
-<iframe width="854" height="510" src="https://www.youtube.com/embed/r0xNV5AYfCA" frameborder="0" allowfullscreen></iframe>
+<a class="videoyt" data-youtube="r0xNV5AYfCA">Youtube-Link</a>
 			</section>
         </section>
 
@@ -128,7 +150,7 @@
 				<p class="fragment">Torsional Forces</p>
         	</section>
 			<section>
-<iframe width="854" height="510" src="https://www.youtube.com/embed/r0xNV5AYfCA" frameborder="0" allowfullscreen></iframe>
+<a class="videoyt" data-youtube="r0xNV5AYfCA">Youtube-Link</a>
 			</section>
 
         </section>
@@ -140,12 +162,12 @@
 			<section>
 				<h3>Walking Patterns</h3>
 			</section>
-<iframe width="854" height="510" src="https://www.youtube.com/embed/W-S8Pk63YRE" frameborder="0" allowfullscreen></iframe>
+<a class="videoyt" data-youtube="W-S8Pk63YRE">Youtube-Link</a>
 			</section>
 			<section>
 				<h3>Antalgic Gait</h3>
 			</section>
-<iframe width="854" height="510" src="https://www.youtube.com/embed/Rz7V1i8kYGU" frameborder="0" allowfullscreen></iframe>
+<a class="videoyt" data-youtube="Rz7V1i8kYGU">Youtube-Link</a>
 			</section>
 			<section>
 				<h3>Trendelenburg Gait</h3>
@@ -259,7 +281,7 @@
 			</section>
 
 			<section>
-<iframe width="854" height="510" src="https://www.youtube.com/embed/KgU_dOeQLQM" frameborder="0" allowfullscreen></iframe>
+<a class="videoyt" data-youtube="KgU_dOeQLQM">Youtube-Link</a>
 			</section>
         </section>
         <section>
