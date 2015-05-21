@@ -36,37 +36,6 @@
 
 	<body>
 
-	<style type="text/css">
-	.videoframe {
-		display:block;
-		margin:0 auto !important;
-		width:640px;
-		height:480px;
-	}
-	</style>
-
-	<script type="text/javascript">
-	
-		$(document).ready(function(){
-			Reveal.addEventListener( 'slidechanged', function( event ) {
-				// event.previousSlide, event.currentSlide, event.indexh, event.indexv
-				var recSlide = event.currentSlide;
-
-				// check if is youtube url is inside slide and save youtubeID, prevent reloading checking videoframe
-				if( ($(recSlide).find('.videoyt').length != 0) && ($(recSlide).find('.videoframe').html()=='') ) {
-					ytid = $(recSlide).find('.videoyt').attr('data-youtube');
-					// replace a.videoyt with video embed code
-					$(recSlide).find('.videoframe').html('<iframe width="640" height="480" src="http://www.youtube.com/embed/'+ytid+'?wmode=opaque&amp;rel=0&amp;vq=large" frameborder="0" allowfullscreen></iframe>');
-					// &iv_load_policy=<3></3>
-					// give anchor with videoid a correct link
-					$(recSlide).find('.videoyt').attr('href', 'http://www.youtube.com/watch?v='+ytid);
-					$(recSlide).find('.videoyt').attr('target', '_blank');
-				}
-			});
-		});
-		
-	</script>
-
 		<div class="reveal">
 
 			<!-- Any section element inside of this container is displayed as a slide -->
@@ -83,8 +52,7 @@
 				<h1>Background Info</h1>
 			</section>
 			<section>
-<div class="videoframe"></div>
-<a class="videoyt" data-youtube="HhUays2ehyI">Youtube-Link</a>
+<a href="https://www.youtube.com/watch?v=HhUays2ehyI">Ultimate Frisbee Highlights</a>
 			</section>
 			<section>
 <div class="videoframe"></div>
