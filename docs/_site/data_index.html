@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>
+      
+        Data - cloud.ga.gov.au
+      
+    </title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="/cloud/assets/css/normalize.css">
+    <link rel="stylesheet" href="/cloud/assets/css/main.css">
+    <link rel="stylesheet" href="/cloud/assets/css/syntax.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="/cloud/assets/js/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+  <body>
+    <div class="container">
+      <header role="banner">
+        <div class="wrap">
+          
+          <h1 class="site-title"><a class="title-link" href="/cloud/">cloud.ga.gov.au</a></h1>
+        </div>
+      </header>
+
+      <div class="wrap content">
+
+        <aside>
+  <p class="intro">Patterns and best-practices</p>
+  <a class="skip-link visuallyhidden focusable" href="#main">Skip to Main Content</a>
+  <nav class="sidebar-nav" role="navigation">
+    <ul>
+      
+          
+            
+              <li><a href="/cloud/./">Home</a></li>
+            
+          
+      
+          
+            
+              <li><a href="/cloud/getting_started_index.html">Getting Started</a></li>
+            
+          
+      
+          
+            
+              <li><a href="/cloud/setting_up_index.html">Setting Up</a></li>
+            
+          
+      
+          
+            
+              <li><a href="">Patterns</a></li>
+            
+          
+      
+          
+            
+              <li><a href="/cloud/patterns_index.html">Patterns & Examples</a></li>
+            
+          
+      
+          
+            
+              <li><a href="/cloud/best_practices_index.html">Best Practices</a></li>
+            
+          
+      
+          
+            
+              <li><a href="/cloud/security_index.html">Security </a></li>
+            
+          
+      
+          
+            <li class="submenu closed"><a href="#">Tools</a></li>
+            <ul class="sidebar-menu-second hidden">
+            
+                
+                  
+                    <li><a class="sidebar-nav-second" href="/cloud/tools">Tools</a></li>
+                  
+                
+              
+            
+                
+                  
+                    <li><a class="sidebar-nav-second" href="/cloud/supported_tools.html">Supported Tools</a></li>
+                  
+                
+              
+            
+            </ul>
+          
+      
+          
+            <li class="submenu closed"><a href="#">Policy</a></li>
+            <ul class="sidebar-menu-second hidden">
+            
+                
+                  <li class="submenu closed"><a class="sidebar-nav-second" href="#">Managemet</a></li>
+                  <ul class="sidebar-menu-third hidden">
+                    
+                      
+                        <li><a class="sidebar-nav-third" href="/cloud/agile_index.html">Agile</a></li>
+                      
+                    
+                      
+                        <li><a class="sidebar-nav-third" href="/cloud/lean_index.html">Lean</a></li>
+                      
+                    
+                  </ul>
+                
+              
+            
+                
+                  <li class="submenu closed"><a class="sidebar-nav-second" href="#">Software</a></li>
+                  <ul class="sidebar-menu-third hidden">
+                    
+                      
+                        <li><a class="sidebar-nav-third" href="/cloud/open_source_index.html">Open Source</a></li>
+                      
+                    
+                      
+                        <li><a class="sidebar-nav-third" href="/cloud/testing_index.html">Testing</a></li>
+                      
+                    
+                  </ul>
+                
+              
+            
+            </ul>
+          
+      
+          
+            
+              <li><a href="/cloud/testing_index.html">Testing</a></li>
+            
+          
+      
+          
+            
+              <li><a href="/cloud/data_index.html">Data</a></li>
+            
+          
+      
+    </ul>
+  </nav>
+</aside>
+
+        <div class="githubright">
+          <a href="/edit/master/docs/_pages/data_index.md">
+            Edit this page on GitHub
+          </a>
+        </div>
+
+        <section id="main" class="main-content" role="main">
+          <h2 class="page-title">Data</h2>
+
+<h3 id="introduction">Introduction</h3>
+
+
+
+        </section>
+
+      </div><!-- /.wrap content -->
+
+      <footer role="contentinfo">
+        <div class="wrap">
+          <p>This project is maintained by <a href="mailto:autobots@ga.gov.au">GA Autobots</a>.</p>
+
+          <p>The theme is based on <a href="https://github.com/cfpb/docter/">DOCter</a> from <a href="http://cfpb.github.io/">CFPB</a>.</p>
+        </div><!--/.wrap -->
+      </footer>
+    </div> <!-- /.container -->
+    
+      <script>
+        //Hide the sub nav items
+        $('.sidebar-menu-second').hide();
+        $('.sidebar-menu-third').hide();
+        //Remove the css class for hiding theme pre js loading
+        $('.sidebar-menu-second').removeClass('hidden');
+        $('.sidebar-menu-third').removeClass('hidden');
+        //add an event listener to show the sub items
+        $("ul.sidebar-menu-second").prev().click(function(e){
+          e.preventDefault();
+          if($(this).hasClass('open')){
+            //Submenu open, close it
+            $('.sidebar-menu-second').hide();
+            $(this).removeClass('open');
+            $(this).addClass('closed');
+          } else {
+            //submenu closed, close others, and open it
+            $("ul.sidebar-menu-second").prev().each(function () {
+              if($(this).hasClass('open')){
+                $(this).removeClass('open');
+                $(this).addClass('closed');
+              }
+            });
+            //close all sub-items too
+            $("ul.sidebar-menu-third").prev().each(function () {
+              if($(this).hasClass('open')){
+                $(this).removeClass('open');
+                $(this).addClass('closed');
+              }
+            });
+
+            //Hide other menus
+            $('.sidebar-menu-second').hide();
+            //open this one
+            $(this).next().slideDown();
+            $('.sidebar-menu-third').hide();
+            $(this).removeClass('closed');
+            $(this).addClass('open');
+          }
+        });
+        //add an event listener to show the sub sub items
+        $("ul.sidebar-menu-third").prev().click(function(e){
+          e.preventDefault();
+          if($(this).hasClass('open')){
+            //Submenu open, close it
+            $('.sidebar-menu-third').hide();
+            $(this).removeClass('open');
+            $(this).addClass('closed');
+          } else {
+            //submenu closed, close others, and open it
+            $("ul.sidebar-menu-third").prev().each(function () {
+              if($(this).hasClass('open')){
+                $(this).removeClass('open');
+                $(this).addClass('closed');
+              }
+            });
+            //Hide other menus
+            $('.sidebar-menu-third').hide();
+            //open this one
+            $(this).next().slideDown();
+            $(this).removeClass('closed');
+            $(this).addClass('open');
+          }
+        });
+      </script>
+    </body>
+</html>

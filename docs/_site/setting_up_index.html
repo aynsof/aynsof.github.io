@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>
+      
+        Setting Up - cloud.ga.gov.au
+      
+    </title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="/cloud/assets/css/normalize.css">
+    <link rel="stylesheet" href="/cloud/assets/css/main.css">
+    <link rel="stylesheet" href="/cloud/assets/css/syntax.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="/cloud/assets/js/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+  <body>
+    <div class="container">
+      <header role="banner">
+        <div class="wrap">
+          
+          <h1 class="site-title"><a class="title-link" href="/cloud/">cloud.ga.gov.au</a></h1>
+        </div>
+      </header>
+
+      <div class="wrap content">
+
+        <aside>
+  <p class="intro">Patterns and best-practices</p>
+  <a class="skip-link visuallyhidden focusable" href="#main">Skip to Main Content</a>
+  <nav class="sidebar-nav" role="navigation">
+    <ul>
+      
+          
+            
+              <li><a href="/cloud/./">Home</a></li>
+            
+          
+      
+          
+            
+              <li><a href="/cloud/getting_started_index.html">Getting Started</a></li>
+            
+          
+      
+          
+            
+              <li><a href="/cloud/setting_up_index.html">Setting Up</a></li>
+            
+          
+      
+          
+            
+              <li><a href="">Patterns</a></li>
+            
+          
+      
+          
+            
+              <li><a href="/cloud/patterns_index.html">Patterns & Examples</a></li>
+            
+          
+      
+          
+            
+              <li><a href="/cloud/best_practices_index.html">Best Practices</a></li>
+            
+          
+      
+          
+            
+              <li><a href="/cloud/security_index.html">Security </a></li>
+            
+          
+      
+          
+            <li class="submenu closed"><a href="#">Tools</a></li>
+            <ul class="sidebar-menu-second hidden">
+            
+                
+                  
+                    <li><a class="sidebar-nav-second" href="/cloud/tools">Tools</a></li>
+                  
+                
+              
+            
+                
+                  
+                    <li><a class="sidebar-nav-second" href="/cloud/supported_tools.html">Supported Tools</a></li>
+                  
+                
+              
+            
+            </ul>
+          
+      
+          
+            <li class="submenu closed"><a href="#">Policy</a></li>
+            <ul class="sidebar-menu-second hidden">
+            
+                
+                  <li class="submenu closed"><a class="sidebar-nav-second" href="#">Managemet</a></li>
+                  <ul class="sidebar-menu-third hidden">
+                    
+                      
+                        <li><a class="sidebar-nav-third" href="/cloud/agile_index.html">Agile</a></li>
+                      
+                    
+                      
+                        <li><a class="sidebar-nav-third" href="/cloud/lean_index.html">Lean</a></li>
+                      
+                    
+                  </ul>
+                
+              
+            
+                
+                  <li class="submenu closed"><a class="sidebar-nav-second" href="#">Software</a></li>
+                  <ul class="sidebar-menu-third hidden">
+                    
+                      
+                        <li><a class="sidebar-nav-third" href="/cloud/open_source_index.html">Open Source</a></li>
+                      
+                    
+                      
+                        <li><a class="sidebar-nav-third" href="/cloud/testing_index.html">Testing</a></li>
+                      
+                    
+                  </ul>
+                
+              
+            
+            </ul>
+          
+      
+          
+            
+              <li><a href="/cloud/testing_index.html">Testing</a></li>
+            
+          
+      
+          
+            
+              <li><a href="/cloud/data_index.html">Data</a></li>
+            
+          
+      
+    </ul>
+  </nav>
+</aside>
+
+        <div class="githubright">
+          <a href="/edit/master/docs/_pages/setting_up_index.md">
+            Edit this page on GitHub
+          </a>
+        </div>
+
+        <section id="main" class="main-content" role="main">
+          <h2 class="page-title">Setting Up</h2>
+
+<h3 id="first-steps">First steps</h3>
+
+<ol>
+  <li>Join <a href="https://geoscience-australia.slack.com/signup">Slack</a>, our messaging app. It’s a great place to ask questions.</li>
+  <li>Join the #awscop and #autobots channels to chat with experts from across GA.</li>
+</ol>
+
+<h3 id="setting-up-aws">Setting up AWS</h3>
+
+<p>If you just want to experiment with AWS, you should get an account in the AWS Dev space. Send a Slack message or an email to the Autobots to get the ball rolling.</p>
+
+<h3 id="create-an-aws-space">Create an AWS space</h3>
+
+<p>If you have an application that will eventually become a production service, you should create a stand-alone account.</p>
+
+<ol>
+  <li>Information you will need:
+    <ul>
+      <li>Approval from the relevant section leader/financial delegate</li>
+      <li>A valid GA Credit Card for step 6.</li>
+      <li>GA Cost and Activity Codes</li>
+      <li>The name for your Account - this should be ‘GA-AWS-xxxxxxxxxx’. For example, ‘ga-aws-bumblebee’ for the Bumblebee project. Maximum of 10 characters for a total of 17 characters overall. The Account Name can also be used as an email at step 2.</li>
+      <li>This information will need to be sent to the Cloud Enablement team (the ‘Autobots’) for them to complete the Consolidated Bill process:</li>
+    </ul>
+
+    <blockquote>
+      <p>Hi Autobots!<br />
+I am creating a new AWS Space called: GA-AWS-GABION<br />
+The space will be used for: Developing a framework for geotechtonic walling processes…<br />
+The section lead is:  John Doe.<br />
+Cost/Activity Codes: 1234/5678<br />
+I will send through account details once created.<br />
+Regards, Account Owner…</p>
+    </blockquote>
+  </li>
+  <li>Create an <a href="https://aws.amazon.com/resources/create-account/">AWS account</a>:
+    <ul>
+      <li>Click on the “Sign Up Now” button - then select the “I am a new user” option.</li>
+      <li>Enter a valid email address - this should be either:</li>
+    </ul>
+
+    <blockquote>
+      <p>A shared GA mailbox (contact the Service Desk - note that this can take some time to create).<br />
+The IT Service Desk will need the following information:  <br />
+Mailbox Name: this should be the Account Name from step 1 with the GA domain - eg. ga-aws-bumblebee@ga.gov.au<br />
+Mailbox Members: should include the relevant Divisional Information Officer (DIO) for the project, The Business Team or Section Lead, the Tecnical Lead, and the Autobots (James Kingsmill and Scott McLauchlan)</p>
+
+      <p><strong>OR</strong></p>
+
+      <p>ga.autobots+<strong>__</strong>@gmail.com (e.g. ga.autobots+bumblebee@gmail.com).<br />
+Email from this account forwards to the Autobots.</p>
+
+      <p>The Contact Email and some other details can be changed later on the My Account page/Account Settings using the root account.</p>
+    </blockquote>
+  </li>
+</ol>
+
+<ul>
+  <li>Click the “Sign in using our secure server” button to creat a new account.</li>
+</ul>
+
+<ol>
+  <li>Login Credentials:
+    <ul>
+      <li>My Name is: this will be the <strong>Account Name</strong> from step 1.</li>
+    </ul>
+  </li>
+</ol>
+
+<ul>
+  <li>My e-mail address: same as used in previous step</li>
+  <li>Enter a password (and remember it for later!)</li>
+  <li>Click “Create Account” button</li>
+</ul>
+
+<ol>
+  <li>Contact Information:
+    <ul>
+      <li>Select “Company Account” radio button</li>
+      <li>Full Name is the <strong>Account Name</strong> from step 1.</li>
+      <li>Company Name and Details as below:<br />
+&gt; Company Name: Geoscience Australia<br />
+&gt; Country: Australia<br />
+&gt; Address: GPO Box 378<br />
+&gt; City: Canberra<br />
+&gt; State: ACT<br />
+&gt; Post Code: 2601<br />
+&gt; Phone: +61 2 6249 9111</li>
+    </ul>
+  </li>
+</ol>
+
+<ul>
+  <li>Complete the Captcha Image test and tick the “AWS Customer Agreement” check box - and click “Create Account and Contine”</li>
+  <li>Welcome to Amazon Web Services page - click ‘Launch Management Console’ button</li>
+</ul>
+
+<ol>
+  <li>Sign In to new account:
+    <ul>
+      <li>My e-mail address: same as used previously</li>
+      <li>Select ‘I am a returning user’ and enter the password</li>
+      <li>click ‘Sign in using our secure server’</li>
+    </ul>
+  </li>
+  <li>Add Credit Card to secure charges:<br />
+ &gt; To cover any charges, AWS requires a credit card to secure the account initially. 
+ &gt; The next step will request the new account to be assigned to GA’s Consolidated Billing account. 
+ &gt; Any credit charges should be minimal (less than $10 in the first month) however this needs to be agreed to by the GA Credit Card holder and the relevant financial delegate.</li>
+</ol>
+
+<ul>
+  <li>Step 1 of 2 - Enter Credit Card Details</li>
+  <li>Step 2 of 2 - select ‘use contact address’ tick box and click ‘Continue’</li>
+</ul>
+
+<ol>
+  <li>Sign up for Consolidated Billing:
+    <ul>
+      <li>Select ‘My Billing Dashboard’ from drop down menu under the Account Name - top right of window.</li>
+      <li>Select the ‘Consolidated Billing’ menu option and click ‘Sign up for Consolidated Billing’</li>
+      <li>You may be asked to Verify your Identity - this is done via an automated phone call
+&gt; A new browser tab will be opened<br />
+&gt; Enter the Captcha text and a valid phone number<br />
+&gt; A Code Number will be displayed and AWS will call the number provided.
+&gt; Enter the code number via the key pad - the web page will automatically update<br />
+&gt; Click the ‘Continue to Support Plan’ button, select the default ‘Basic’ option and click ‘Continue’<br />
+&gt; Registration should now be complete - close this window and click back to the Billing Management Tab</li>
+    </ul>
+  </li>
+</ol>
+
+<ul>
+  <li>Refresh the page and click ‘Sign up for Consolidated Billing’<br />
+&gt; An email will be sent to the ‘Autobots’ Cloud Enablement team who will login to the GA Consolidated Billing account and add the new AWS Account.<br />
+&gt; At this point the ‘Autobots’ will need information about the account detailed in step 1 and the Account Number…<br />
+&gt; Once they have actioned the request you will receive an email to accept Consolidated Billing for the account.</li>
+</ul>
+
+<ol>
+  <li>Clean up steps… [Tony to complete…]</li>
+</ol>
+
+<blockquote>
+  <p>Rename your space from its account number to ‘ga-aws-_____’.<br />
+Add MFA to your root account.
+Send Root Account details to Autobots (for safekeeping) - how to do this securely??
+Set up Admin Account users - and discontinue use of Root Account…
+Ensure best practice security procedures in place…</p>
+</blockquote>
+
+<h3 id="setting-up-continuous-delivery">Setting up Continuous Delivery</h3>
+
+<ol>
+  <li>Make sure your code is in version control in Github or Bitbucket.</li>
+  <li>Get started with your pipeline:
+    <ul>
+      <li>If you’re using Github, you’ll be using <a href="https://travis-ci.org/">TravisCI</a>. Start by adding a .travis.yml to your repository.</li>
+      <li>If you’re using Bitbucket, you’ll be using <a href="https://confluence.atlassian.com/bitbucket/get-started-with-bitbucket-pipelines-792298921.html">Bitbucket Pipelines</a>. This link has all the information you need to get started.</li>
+    </ul>
+  </li>
+</ol>
+
+
+        </section>
+
+      </div><!-- /.wrap content -->
+
+      <footer role="contentinfo">
+        <div class="wrap">
+          <p>This project is maintained by <a href="mailto:autobots@ga.gov.au">GA Autobots</a>.</p>
+
+          <p>The theme is based on <a href="https://github.com/cfpb/docter/">DOCter</a> from <a href="http://cfpb.github.io/">CFPB</a>.</p>
+        </div><!--/.wrap -->
+      </footer>
+    </div> <!-- /.container -->
+    
+      <script>
+        //Hide the sub nav items
+        $('.sidebar-menu-second').hide();
+        $('.sidebar-menu-third').hide();
+        //Remove the css class for hiding theme pre js loading
+        $('.sidebar-menu-second').removeClass('hidden');
+        $('.sidebar-menu-third').removeClass('hidden');
+        //add an event listener to show the sub items
+        $("ul.sidebar-menu-second").prev().click(function(e){
+          e.preventDefault();
+          if($(this).hasClass('open')){
+            //Submenu open, close it
+            $('.sidebar-menu-second').hide();
+            $(this).removeClass('open');
+            $(this).addClass('closed');
+          } else {
+            //submenu closed, close others, and open it
+            $("ul.sidebar-menu-second").prev().each(function () {
+              if($(this).hasClass('open')){
+                $(this).removeClass('open');
+                $(this).addClass('closed');
+              }
+            });
+            //close all sub-items too
+            $("ul.sidebar-menu-third").prev().each(function () {
+              if($(this).hasClass('open')){
+                $(this).removeClass('open');
+                $(this).addClass('closed');
+              }
+            });
+
+            //Hide other menus
+            $('.sidebar-menu-second').hide();
+            //open this one
+            $(this).next().slideDown();
+            $('.sidebar-menu-third').hide();
+            $(this).removeClass('closed');
+            $(this).addClass('open');
+          }
+        });
+        //add an event listener to show the sub sub items
+        $("ul.sidebar-menu-third").prev().click(function(e){
+          e.preventDefault();
+          if($(this).hasClass('open')){
+            //Submenu open, close it
+            $('.sidebar-menu-third').hide();
+            $(this).removeClass('open');
+            $(this).addClass('closed');
+          } else {
+            //submenu closed, close others, and open it
+            $("ul.sidebar-menu-third").prev().each(function () {
+              if($(this).hasClass('open')){
+                $(this).removeClass('open');
+                $(this).addClass('closed');
+              }
+            });
+            //Hide other menus
+            $('.sidebar-menu-third').hide();
+            //open this one
+            $(this).next().slideDown();
+            $(this).removeClass('closed');
+            $(this).addClass('open');
+          }
+        });
+      </script>
+    </body>
+</html>
