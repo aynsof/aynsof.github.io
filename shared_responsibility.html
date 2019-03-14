@@ -74,11 +74,25 @@
         <section id="main" class="main-content" role="main">
           
 <h1 id="cloudgagovau">Shared Responsibility</h1>
-<p></p>
+<p>Whether you’re a developer or an executive, you need to understand where your responsibility ends and the cloud provider’s responsibility starts. It is acceptable for the granularity of understanding to change at different levels, but not for the understanding to be absent.</p>
+<h2>Shared Services Groups or Internal IT</h2>>
+<ul>
+  <li>Must articulate your shared responsibility model with your users</li>
+  <li>Could consider offering different tiers:</li>
+  <ul>
+    <li>Fully open - users have full control and full accountability</li>
+    <li>Partially open - users have strong guardrails in place</li>
+    <li>Mostly managed - effectively a PaaS</li>
+  </ul>
+</ul>
 
+<h2>Service Level Agreements (SLAs)</h2>
+<p>As an example, consider a cloud provider offering a Service Level Agreement (SLA) for a particular product. Say, a compute platform. They offer 99.95% uptime with an SLA. Dig into the details and look at the fine print.</p>
+    
+<p>99.95% means around 20 minutes of downtime per month or around 4 hours per year. The SLA offers a 10% refund if the service provider doesn’t meet this SLA. Your bill per month is, say, $3000. You’re serving 10,000 users per day, around 400 per hour. But that’s not evenly distributed. You might get several thousand using your service between 18:00 and 20:00 each night. Would $300 really make up for your application going down for an hour during this period?</p>
 
-
-
+<h2>Architectural Responsibility</h2>
+<p>In this case, you might need to rearchitect your system to engineer higher availability. Have you considered using multiple regions? Using a higher availability service to serve static assets? Using a content distribution network? Breaking your application into smaller, decoupled pieces and degrading gracefully?</p>
         </section>
 
       </div><!-- /.wrap content -->
