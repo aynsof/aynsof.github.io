@@ -3,11 +3,6 @@ exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 markdown: kramdown
 highlighter: rouge
 
-collections:
-  pages:
-    output: true
-    permalink: /:path/
-
 # Title
 name: cloud.ga.gov.au
 subtitle: Patterns and best-practices
