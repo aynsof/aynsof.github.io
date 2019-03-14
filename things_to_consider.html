@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>
+      
+      Digital Transformation Guide Prototype
+      
+    </title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/syntax.css">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico?">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="/assets/js/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+  <body>
+    <div class="container">
+      <header role="banner">
+        <div class="wrap">
+          
+            <a href="https://www.dta.gov.au"><img class="logo" src="/assets/img/ga-logo.png" alt=""></a>
+          
+          <h1 class="site-title"><a class="title-link" href="https://www.dta.ga.gov.au/">Digital Transformation Guide</a></h1>
+        </div>
+      </header>
+
+      <div class="wrap content">
+
+        <aside>
+  <nav class="sidebar-nav" role="navigation">
+    <ul>
+            <li><a href="https://dta.ga.gov.au/">Home</a></li>
+            
+            <li><a href="#">Run digital projects</a></li>
+
+            <li><a href="#">Organisational change</a></li>
+
+            <li><a href="#">Digital practices</a></li>
+
+            <li class="submenu closed"><a href="#">Technology</a></li>
+            <ul class="sidebar-menu-second hidden">      
+                    <li><a class="sidebar-nav-second" href="/things_to_consider.html">Things to Consider</a></li>
+                    <li><a class="sidebar-nav-second" href="/best_practices.html">Best Practices</a></li>
+            </ul>
+
+            <li><a href="#">Support and resources</a></li>
+
+            <li><a href="#">Case studies</a></li>
+
+            <li><a href="#">Glossary</a></li>
+    </ul>
+  </nav>
+</aside>
+
+
+        <div class="githubright">
+          <a href="https://github.com/aynsof/aynsof.github.io/edit/master/docs/index.html">
+            Edit this page on GitHub
+          </a>
+        </div>
+
+        <section id="main" class="main-content" role="main">
+          
+<h1 id="cloudgagovau">Things to Consider</h1>
+<p>What are things to consider?</p>
+
+
+
+
+        </section>
+
+      </div><!-- /.wrap content -->
+
+      <footer role="contentinfo">
+        <div class="wrap">
+          <p>This project is maintained by <a href="mailto:null@ga.gov.au">JK</a>, using a theme based on <a href="https://github.com/cfpb/docter/">DOCter</a> from <a href="http://cfpb.github.io/">CFPB</a>.</p>
+
+          <p><a style="border: none" href="http://www.ga.gov.au/copyright"><img width="88" alt="Creative Commons Attribution Licence" src="/assets/img/ccby.png"></a></p>
+        </div><!--/.wrap -->
+      </footer>
+    </div> <!-- /.container -->
+    
+      <script>
+        //Hide the sub nav items
+        $('.sidebar-menu-second').hide();
+        $('.sidebar-menu-third').hide();
+        //Remove the css class for hiding theme pre js loading
+        $('.sidebar-menu-second').removeClass('hidden');
+        $('.sidebar-menu-third').removeClass('hidden');
+        //add an event listener to show the sub items
+        $("ul.sidebar-menu-second").prev().click(function(e){
+          e.preventDefault();
+          if($(this).hasClass('open')){
+            //Submenu open, close it
+            $('.sidebar-menu-second').hide();
+            $(this).removeClass('open');
+            $(this).addClass('closed');
+          } else {
+            //submenu closed, close others, and open it
+            $("ul.sidebar-menu-second").prev().each(function () {
+              if($(this).hasClass('open')){
+                $(this).removeClass('open');
+                $(this).addClass('closed');
+              }
+            });
+            //close all sub-items too
+            $("ul.sidebar-menu-third").prev().each(function () {
+              if($(this).hasClass('open')){
+                $(this).removeClass('open');
+                $(this).addClass('closed');
+              }
+            });
+
+            //Hide other menus
+            $('.sidebar-menu-second').hide();
+            //open this one
+            $(this).next().slideDown();
+            $('.sidebar-menu-third').hide();
+            $(this).removeClass('closed');
+            $(this).addClass('open');
+          }
+        });
+        //add an event listener to show the sub sub items
+        $("ul.sidebar-menu-third").prev().click(function(e){
+          e.preventDefault();
+          if($(this).hasClass('open')){
+            //Submenu open, close it
+            $('.sidebar-menu-third').hide();
+            $(this).removeClass('open');
+            $(this).addClass('closed');
+          } else {
+            //submenu closed, close others, and open it
+            $("ul.sidebar-menu-third").prev().each(function () {
+              if($(this).hasClass('open')){
+                $(this).removeClass('open');
+                $(this).addClass('closed');
+              }
+            });
+            //Hide other menus
+            $('.sidebar-menu-third').hide();
+            //open this one
+            $(this).next().slideDown();
+            $(this).removeClass('closed');
+            $(this).addClass('open');
+          }
+        });
+      </script>
+    </body>
+</html>
