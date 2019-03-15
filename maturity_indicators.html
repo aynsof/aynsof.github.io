@@ -89,29 +89,47 @@
 
 <h3><a href="https://rework.withgoogle.com/blog/five-keys-to-a-successful-google-team/">Google reWork Report</a></h3>
 <ul>
-  <li>Google's research into their own teams found that psychological safety is #1 predictor of high performance</li>
-  <li>"Can we take risks without feeling insecure or embarrassed?</li>
+  <li>Google's research into their own teams looked into the predictors of high performance. The research found that five key dynamics set successful teams apart from other teams:</li>
+  <ol>
+      <li>Psychological safety: "Can we take risks on this team without feeling insecure or embarrassed?"</li>
+      <li>Dependability: "Can we count on each other to do high quality work on time?"</li>
+      <li>Structure & clarity: "Are goals, roles, and execution plans on our team clear?"</li>
+      <li>Meaning of work: "Are we working on something that is personally important for each of us?"</li>
+      <li>Impact of work: "Do we fundamentally believe that the work we’re doing matters?"</li>
+  </ol>>
 </ul>
 
 <h3><a href="https://stripe.com/files/reports/the-developer-coefficient.pdf">Stripe - The Developer Coefficient</a></h3>
 <ul>
-  <li>Access to developers is a bigger threat to success than access to capital</li>
-  <li>Estimated $300bn USD annual loss from developer inefficiency, including:</li>
+  <li>This report looks into the economic impacts of inefficiencies in the developer ecosystem. The senior executives who were surveyed reported that access to developers was the biggest threat to their organisations - more important to them than access to capital.</li>
+  <li>The report estimated a $300 billion annual loss from developer inefficiency, including:</li>
   <ul>
-    <li>Legacy systems and technical debt</li>
+    <li>Maintenance of legacy systems and technical debt</li>
     <li>Leadership prioritisation</li>
     <li>Building custom technology</li>
   </ul>
 </ul>
 
 <h3><a href="https://m.subbu.org/incidents-trends-from-the-trenches-e2f8497d52ed">Incidents - Trends from the Trenches</a></h3>
-<p>Subbu Allamaraju, Vice President of Technology at Expedia</p>
+<p>Subbu Allamaraju, Vice President of Technology at Expedia, studied several hundred production incidents from a large set of customer-facing applications and services running both on-premises and in the cloud. There are a number of lessons that he suggests can be learned from this research:</p>
 <ul>
-    <li>Change safety - progressive deployments (canaries), feature flags, blue/green, predictable rollbacks, shadow testing</li>
-    <li>Fault containment/redundancy - redundant copies (active or passive), compartmentalisation, low coupling</li>
-    <li>Importance of automation, cloud to reduce undifferentiated heavy lifting</li>
+    <li>Change safety, including:
+      <ul>
+        <li>Progressive deployment methods, like <a href="https://martinfowler.com/bliki/CanaryRelease.html">canary releases</a></li>
+        <li><a href="https://martinfowler.com/articles/feature-toggles.html">Feature flags</a></li>
+        <li><a href="https://martinfowler.com/bliki/BlueGreenDeployment.html">Blue/green deployments</a></li>
+        <li>Predictable rollbacks</li>
+        <li><a href="https://medium.com/@copyconstruct/testing-in-production-the-safe-way-18ca102d0ef1">Shadow testing</a></li>
+      </ul>
+    <li>Fault containment/redundancy, including:
+      <ul>
+        <li>Redundant copies</li>
+        <li>Compartmentalisation</li>
+        <li>Low coupling</li>
+      </ul>
+    <li>Reducing <a href="https://aws.amazon.com/types-of-cloud-computing/">undifferentiated heavy lifting</a> or <a href="https://landing.google.com/sre/sre-book/chapters/eliminating-toil/">toil</a> through the use of automation and cloud services</li>
     <li>Observability of systems</li>>
-    <li>Importance of post-incident rituals</li>
+    <li>Importance of post-incident rituals, such as <a href="https://codeascraft.com/2012/05/22/blameless-postmortems/">blameless post-mortems</a></li>
 </ul>
 
         </section>
