@@ -83,7 +83,7 @@
   <li>Measure everything</li>
 </ol>
     
-<p>A number of good practices emerge out of the adoption of these principles, such as blameless post-mortems, the elimination of <a href="https://landing.google.com/sre/sre-book/chapters/eliminating-toil/">toil</a>, a culture of continuous improvement and learning.</p>
+<p>A number of good practices emerge out of the adoption of these principles, such as <a href="https://codeascraft.com/2012/05/22/blameless-postmortems/">blameless post-mortems</a>, the elimination of <a href="https://landing.google.com/sre/sre-book/chapters/eliminating-toil/">toil</a>, a culture of continuous improvement and learning.</p>
 
 <h2>Align Incentives</h2>
 <p>If you design it, you build it; if you build it, you run it. We can’t have large architectural decisions being made by people who won’t need to build those architectures. And we can’t have code being written by people who have no incentive to make their code resilient. Architects write code. Developers have the on-call phone. Ops staff push features. This is the basis of DevOps.</p>
@@ -93,8 +93,7 @@
 <p>And if you are an executive, you need to view dashboards, come to showcases and ask informed and pointed questions of their delivery teams. You need to lead the way in looking at radiated information, not interrupting delivery teams with requests for bespoke information.</p>
 
 <h2>Continuous Improvement</h2>
-<p>Requires measuring things</p>
-<p>Psychological safety</p>
+<p>This can be framed in many different ways, from the Toyota Production System's idea of Kaizen through to the <a href="https://itrevolution.com/the-three-ways-principles-underpinning-devops/">Three Ways</a> of DevOps. The important thing is that continuous improvement requires psychological safety and measurement of key metrics.</p>
 
 <h2>Learn from Failures</h2>
 <p>Failures are inevitable. When we fail - it’s ‘when’ not ‘if’ - we need to have blameless post-mortems. The results from these must be shared throughout the organisation, in order to ensure we’re learning and that mistakes aren’t repeated. Ideally this sharing will occur publicly to ensure we’re maintaining the trust of our users.</p>
@@ -102,14 +101,17 @@
 <p>‘Human error’ is also not an acceptable finding of a post-mortem. To quote John Allspaw, former CIO of Etsy, in cultures where people are punished for making mistakes, they “are disincentivized to give the details necessary to get an understanding of the mechanism, pathology, and operation of the failure. This lack of understanding of how the accident occurred all but guarantees that it will repeat. If not with the original [person], another one in the future.” (<a href="https://codeascraft.com/2012/05/22/blameless-postmortems/">https://codeascraft.com/2012/05/22/blameless-postmortems/</a>)</p>
 
 <h2>Risk-Based Decisions</h2>
-<p>Core of the ISM and the Secure Cloud Strategy</p>
-<p>Moving slowly is not ‘low risk’</p>
-<p>“Our aversion to risk is our greatest risk” - AlMac</p>
+<p>This concept is at the core of the <a href="https://acsc.gov.au/infosec/ism/index.htm">Information Security Manual</a> and the <a href="https://www.dta.gov.au/our-projects/secure-cloud-strategy">Secure Cloud Strategy</a>. It is important to remember that moving slowly is not ‘low risk’. As Alastair MacGibbon, then the Cyber Security Special Advisor and current Head of the Australian Cyber Security Centre, <a href="https://youtu.be/LU-v2LG5Z34?t=382">said in an address at the AWS Public Sector Summit 2017</a>: <em>“Our risk aversion as government actually increases our risk. We accrete risk because we fail to move as fast as we could."</em></p>
 
 <h2>Products not Projects</h2>
-<p>It’s difficult in government</p>
-<p>Serious risks in ‘throwing applications over the fence to ops’</p>
-<p>The people who build the thing are the best placed to support the thing</p>
+<p>With cloud-based services, it's even more essential that we treat them as ongoing products and not projects with an end date. There are serious risks in ‘throwing applications over the fence' to the operations team.</p>
+<ul>
+  <li>Users' expectations of digital services are higher than ever, and only increasing. Multi-hour outages are unacceptable to people that are used to the reliability of services like Google and Netflix. At the same time, digital services are becoming increasingly complex and difficult to manage.</li>
+  <li>Fast-moving organisations have a distinct advantage in being able to experiment in meeting their users' needs. This is typically through a combination of releasing services quickly, A/B testing, and gathering high-quality analytics in near real-time. While there is no corporate competitive advantage for government agencies, there is a compelling need to deliver better quality services for the people and businesses of the country.</li>
+  <li>Fast and frequent deployments require a delivery cadence that is not possible under old models with patterns like fortnightly Change Advisory Boards or passing tickets between developers and operations staff.</li>
+</ul>
+<p>The solution that high performing organisations have realised is that the people who are best placed to support a service are the people who designed the service. This is one of the core arguments for the <a href="https://guides.service.gov.au/digital-service-standard/2-multidisciplinary-team/">Multi-Disciplinary Team</a>.</p>
+<p>This kind of approach is difficult in government. Money is allocated for projects, not products. Governance reporting is similarly focussed on the project not the product. Change needs to occur at a number of different layers for this to occur, but agencies should begin changing their processes now.</p>
 
 
 
