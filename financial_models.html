@@ -75,25 +75,72 @@
           
 <h1 id="cloudgagovau">Financial Models</h1>
 <h2>CapEx to OpEx</h2>
+<p>A <a href="https://macquariegovernment.com/blog/new-ovum-study-shows-govt-ict-evolution-underway/">2018 Ovum study on cloud adoption in government</a> found that available OpEx was the number one obstacle to cloud adoption for federal government agencies. In response to this finding, DTA would suggest that agencies:</p>
 <ul>
-  <li>We understand that this is one of the primary obstacles to cloud adoption (cf Dimension Data report)</li>
-  <li>Talk to your Finance team</li>
-  <li>Talk to Dept of Finance</li>
-  <li>Talk to us at DTA</li>
+  <li>Talk to their internal finance team</li>
+  <li>Talk to their Agency Advice Unit (AAU) at the Department of Finance</li>
+  <li>Talk to <a href="mailto:secure.cloud@dta.gov.au">the Secure Cloud team at the DTA</a></li>
 </ul>
 
 <h2>Align Incentives</h2>
+<p>Following a DevOps model, cost decisions must be made by the same person who has accountability for delivery. This should be the same person who has accountability for security decisions. The three key specific risks of cloud - cost, security and delivery - must lie with one person for each discrete part of  a system. If these are separate people, the three risks will inevitably pull in different directions and the accountability will simply rise up the organisational chart.</p>
+<p>It might be clearer to illustrate an example:</p>
 <ul>
-  <li>Delivery decisions must be made by the same person who has cost ownership</li>
+  <li>A new system is being developed.</li>
+  <li>To help developers prototype, a data bucket has been made public.</li>
+  <li>The delivery team has made sure that they are operating with dummy data and have demonstrated this to the satisfaction of the system's product owner.</li>
+  <li>The team is also instantiating multiple development environments to help them ensure that they are testing their changes on a system that replicates as closely as possible the system that will eventually go live.</li>
+  <li><strong>If the accountability for risks lies with a single person</strong>, that person will be able to take the advice of their experts and make an informed decision about whether the data bucket should be public, and whether the increased cost from the additional environments is worth the increase in productivity.</li>
+  <li><strong>If the accountability for risks lies with three separate people with the same manager</strong>, they will ideally come to a consensus about the risks involved. If, however, there are strong opinions they will likely go to some third party for arbitration. This person will most often be their manager.</li>
+  <li><strong>If the accountability for risks lies with three separate people with different managers</strong>, they will need to go to the first person in the organisational structure that is common between all three. This could be the CIO. In some organisations, this could be the CEO or Secretary.</li>
 </ul>
 
 <h2>Hosting Decisions</h2>
+<p>You must decide how much control and flexibility you want in hosting your service and then choose a supplier who meets your needs.</p>
+<p>This guidance is about hosting for systems and information classified as UNCLASSIFIED, OFFICIAL, OFFICIAL:Sensitive and PROTECTED. These classifications cover the vast majority of what government does.</p>
+<p>If you’re building a service that involves information classified as SECRET or above, ask your Security team or Chief Security Officer for guidance.</p>
+
+<h2>Public Cloud by Default</h2>
+<p>In line with the Government's <a href="https://www.dta.gov.au/our-projects/secure-cloud-strategy">Secure Cloud Strategy</a>, agencies must consider and fully evaluate public cloud solutions before considering other options.</p>
+<p>If you believe you can't use public cloud, you should contact the DTA's <a href="mailto:dimo@dta.gov.au">Digital Investment Division</a> as soon as possible.</p>
+<p>You’ll have to explain why you can’t use cloud hosting and how your alternative will provide value for money. You should consider the operational costs for the expected lifetime of your service and the value of flexibility.</p>
+
+<h2>Hosting Options</h2>
+<p>Hosting can be a significant investment for your organisation. You should consider these options:</p>
 <ul>
-  <li><a href="https://www.gov.uk/service-manual/technology/deciding-how-to-host-your-service">Cloud first</a></li>
-  <li>Contact DID if you feel you can’t go to cloud</li>
-  <li>SaaS > PaaS > IaaS</li>
-  <li>cloud.gov.au</li>
+  <li>Software as a Service (SaaS)</li>
+  <li>Platform as a Service (PaaS)</li>
+  <li>Infrastructure as a Service (IaaS)</li>
 </ul>
+
+<h3>Software as a Service</h3>
+<p>As you develop your understanding of the components of your service, you should consider where SaaS can provide some of the functionality.</p>
+<p>Make sure that you have the connectivity to the component and make backups so that you keep control of your data.</p>
+
+<h3>Platform as a Service</h3>
+<p>PaaS allows you to rent storage space but also offers a layer on top, which might include:</p>
+<ul>
+  <li>operating systems</li>
+  <li>databases</li>
+  <li>logging infrastructure or other features</li>
+</ul>
+<p>Most PaaS suppliers will expect your architecture to meet their specific requirements. For example, they offer limited flexibility for software environments, languages or interfaces, so check the details before you sign an agreement.</p>
+
+<h3>cloud.gov.au</h3>
+<p>You may be able to deploy your service on the DTA's <a href="cloud.gov.au">cloud.gov.au</a> Platform as a Service.</p>
+<p>To be hosted on <a href="cloud.gov.au">cloud.gov.au</a>, your application must:
+<ul>
+  <li>meet the 12-factor application principles</li>
+  <li>be written in Go, Node.js, Java, PHP, Python, Ruby, .NET Core, static HTML, CSS, JavaScript</li>
+</ul>
+
+<h3>Infrastructure as a Service</h3>
+<p>IaaS is a system where you can quickly add or remove capacity and the supplier only bills you for what you use.</p>
+<p>You’ll need someone in your team with the technical infrastructure skills and time to manage it.</p>
+<p>If you’re unsure whether your team could handle IaaS hosting, consider PaaS instead - it’ll allow your team to focus time and effort on the tasks best suited to their skills.</p>
+
+<h2>Assessing Cloud Providers</h2>
+<p>The DTA has provided a <a href="assess.cloud.gov.au">Cloud Assessment Tool (CAT)</a> to help agencies understand their compliance obligations when moving to cloud, and to help them ask informed questions of potential cloud providers.</p>
 
         </section>
 
