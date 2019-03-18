@@ -75,30 +75,43 @@
           
 <h1 id="cloudgagovau">Cloud Governance</h1>
 <h2>Cloud-Specific Risks</h2>
+<p>There are three risks that are specifically associated with using cloud:</p>
 <ul>
-  <li>Cost</li>
-  <li>Security</li>
-  <li>Risks to delivery:
+  <li>Cost
     <ul>
-      <li>Delivering the wrong thing</li>
-      <li>Slow processes that impede delivery</li>
+      <li>The self-service nature of cloud means that expensive resources can be created by developers or engineers.</li>
+      <li>Cloud's ability to scale dynamically can have budgetary impacts.</li>
+      <li>Cloud's cost model often charges data egress fees, which can be unbounded.</li>
+    </ul>
+  </li>
+  <li>Security
+    <ul>
+      <li>The self-service nature of cloud means that developers or engineers can inadvertently inject security vulnerabilities into services.</li>
+      <li>There are specific risks related to the level of access the provider's employees have to your systems. Note that an agency's relationship with a cloud service provider could, depending on the provider, be more like a traditional outsourcing arrangement or more like their relationship with the provider of their operating system.</li>
+    </ul>
+  </li>
+  <li>Delivery
+    <ul>
+      <li>Slow processes that impede agility can be one of the major risks of cloud adoption. As outlined in the <a href="https://www.dta.gov.au/our-projects/secure-cloud-strategy">Secure Cloud Strategy</a>, one of the key benefits of cloud is agility: business areas can eliminate the lead times that delay delivery, rapidly prototyping and experimenting in order to deliver the best possible service for users.</li>
+      <li>Delivering the wrong thing is, as always, a risk. Cloud provides the ability to prototype rapidly, experiment easily and analyse the results of experiments. But if the research isn't performed to <a href="https://guides.service.gov.au/digital-service-standard/1-understand-user-needs/">understand user needs</a>, this could simply make for faster delivery of the wrong thing.</li>
     </ul>
   </li>
 </ul>
 
-<h2>Senior Responsible Officer</h2>
-<ul>
-  <li>Must have aligned incentives - must have an approach that balances delivery and security</li>
-  <li><a href="https://aws.amazon.com/blogs/enterprise-strategy/creating-the-cloud-business-office/">Cloud Business Office</a></li>
-  <li><a href="https://docs.aws.amazon.com/aws-technical-content/latest/aws-governance-at-scale/introduction.html">Scalable Cloud Governance</a></li>
-</ul>
+<h2>Senior Responsible Official</h2>
+<p>The SRO is the single point of overall accountability for the successful adoption of cloud within the agency. They are accountable for ensuring the agency's cloud program meets the goals of the agency's cloud strategy and of the Government's <a href="https://www.dta.gov.au/our-projects/secure-cloud-strategy">Secure Cloud Strategy</a>. Typically, the SRO would be an officer at the Senior Executive Service Band 2 or Band 3 level. Following a DevOps model, the SRO must have aligned incentives: they must have an approach that balances delivery and security, understanding that <a href="https://youtu.be/LU-v2LG5Z34?t=382">moving slowly often increases our risk</a>.</p>
+
+<h2>Cloud Business Office</h2>
+<p>The SRO can be complemented by a <a href="https://aws.amazon.com/blogs/enterprise-strategy/creating-the-cloud-business-office/">Cloud Business Office</a>, which ensures that key stakeholders from across the agency are represented. In this model, the SRO would fill the role of Cloud Transformation Leader.</p>
+<p>A key role of the Cloud Business Office is to have oversight of the information emerging from the information being radiated from delivery teams. The executives in the Cloud Business Office need to have a sufficient level of understanding of the specific risks of cloud - cost, security and delivery - to be able to interrogate teams about the information they radiate.</p>
+
+<h2>Scalable Cloud Governance</h2>
+<p>The Cloud Business Office can lead the adoption of <a href="https://docs.aws.amazon.com/aws-technical-content/latest/aws-governance-at-scale/introduction.html">Scalable Cloud Governance</a>.</p>
 
 <h2>Radiating Information</h2>
 <p>Teams that are autonomous must not be black boxes. They must radiate information to all stakeholders. This should include information about delivery, security, cost, system health, product usage metrics.</p>
 
 <p>When we talk about ‘radiating information’, we’re not talking about writing reports. That kind of manual reporting can be a huge drain on delivery teams. We’re talking about things like kanban boards, which show work in progress and highlight blockers. Or something like Google Analytics, which can show user activity. Or the security tools that are built into public cloud providers for owners to get insights in real time into their security posture.</p>
-
-<h2>Executive Involvement</h2>
 <p>Teams need to radiate information. The other essential part of the equation is that leaders must pay attention to this information. They must look at it, understand it (at some level of granularity) and be able to interrogate it. This needs to be the case at all levels of seniority. Red lights mean nothing if they don’t raise questions.</p>
 
 <h2>Removing Obstacles</h2>
