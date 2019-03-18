@@ -75,24 +75,56 @@
           
 <h1 id="cloudgagovau">Shared Responsibility</h1>
 <p>Whether you’re a developer or an executive, you need to understand where your responsibility ends and the cloud provider’s responsibility starts. It is acceptable for the granularity of understanding to change at different levels, but not for the understanding to be absent.</p>
+
 <h2>Shared Services Groups or Internal IT</h2>
+<p>Any group that is inserting itself as a layer between developers and engineers must clearly articulate their shared responsibility model with their users. Not doing this increases the risk to both parties. The service provider must also ensure that they do not create barriers or obstacles that reduce the ability of their users to realise the benefits to agility that are outlined in the Government's <a href="https://www.dta.gov.au/our-projects/secure-cloud-strategy">Secure Cloud Strategy</a>.</p>
+<p>The service provider could consider offering different tiers:</p>
 <ul>
-  <li>Must articulate your shared responsibility model with your users</li>
-  <li>Could consider offering different tiers:</li>
-  <ul>
-    <li>Fully open - users have full control and full accountability</li>
-    <li>Partially open - users have strong guardrails in place</li>
-    <li>Mostly managed - effectively a PaaS</li>
-  </ul>
+  <li>Fully open
+    <ul>
+      <li>Users have full control and full accountability</li>
+      <li>Users get the benefits of centralised cost management, including price reductions that come with economies of scale</li>
+    </ul>
+  </li>
+  <li>Partially open
+    <ul>
+        <li>There are strong guardrails in place to reduce major risks</li>
+        <li>Guardrails could include rules that prohibit the creation of certain high-risk resources, like public data buckets</li>
+    </ul>
+  </li>
+  <li>Mostly managed
+    <ul>
+        <li>This tier is effectively a PaaS, with users only able to perform a small number of pre-approved activities</li>
+    </ul>
+  </li>
 </ul>
+<p>It is important for service providers to understand the benefits and trade-offs of each model. If they offer only an open model, they could run the risk of unskiled developers creating security vulnerabilities or running up large costs. If they offer only a closed model, they could impact developer productivity or run the risk of product owners engaging in <a href="https://en.wikipedia.org/wiki/Shadow_IT">Shadow IT</a>.</p>
 
 <h2>Service Level Agreements (SLAs)</h2>
-<p>As an example, consider a cloud provider offering a Service Level Agreement (SLA) for a particular product. Say, a compute platform. They offer 99.95% uptime with an SLA. Dig into the details and look at the fine print.</p>
-    
-<p>99.95% means around 20 minutes of downtime per month or around 4 hours per year. The SLA offers a 10% refund if the service provider doesn’t meet this SLA. Your bill per month is, say, $3000. You’re serving 10,000 users per day, around 400 per hour. But that’s not evenly distributed. You might get several thousand using your service between 18:00 and 20:00 each night. Would $300 really make up for your application going down for an hour during this period?</p>
+<p>It is essential that agencies understand their cloud providers' SLA model. As an example, consider a cloud provider offering an SLA for a particular product. They offer 99.95% uptime with an SLA. Dig into the details and look at the fine print.</p>    
+<ul>
+  <li>99.95% means around 20 minutes of downtime per month or around 4 hours per year.</li>
+  <li>The SLA offers a 10% refund if the service provider doesn’t meet this SLA.</li>
+  <li>Your agency's bill per month in this example is $3000.</li>
+  <li>You’re serving 10,000 users per day, around 400 per hour.</li>
+  <li>This is not evenly distributed. You might get several thousand using your service between 18:00 and 20:00 each night.</li>
+</ul>
+<p>The question for risk owners to ask themselves in this example is: would $300 really make up for their application being unavailable for an hour during this period?</p>
 
 <h2>Architectural Responsibility</h2>
-<p>In this case, you might need to rearchitect your system to engineer higher availability. Have you considered using multiple regions? Using a higher availability service to serve static assets? Using a content distribution network? Breaking your application into smaller, decoupled pieces and degrading gracefully?</p>
+<p>In this case, you might need to rearchitect your system to engineer higher availability. Mitigations could be put in place:</p>
+<ul>
+  <li>The application could be architected across multiple Availability Zones or Regions.</li>
+  <li>A global content distribution network could be used to reduce the impact on your origin servers.</li>
+  <li>The application could be designed to <a href="https://medium.com/netflix-techblog/lessons-netflix-learned-from-the-aws-outage-deefe5fd0c04">degrade gracefully</a>.</li>
+</ul>
+<p>Note that deploying a single application across multiple cloud providers can increase the risk to your agency:
+<ul>
+  <li>Advanced services aren't able to be orchestrated easily between cloud providers. This reduces your cloud providers to the lowest common denominators - like virtual machines and blob storage.</li>
+  <li>Delivery teams must be skilled in multiple cloud providers, increasing the cognitive load on the team and decreasing the likelihood of finding sufficiently trained staff.</li>
+</ul>
+
+
         </section>
 
       </div><!-- /.wrap content -->
