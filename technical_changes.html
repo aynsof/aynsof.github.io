@@ -75,36 +75,30 @@
           
 <h1 id="cloudgagovau">Technical Changes</h1>
 <h2>Automation</h2>
+<p>Cloud allows you to automate far more of your system than you could previously. It also allow you to offload a lot of undifferentiated heavy lifting by taking advantage of advanced cloud services. Some key points to remember when automating your systems:</p>
 <ul>
-  <li>API, not brokerage - must give developers direct access to API or can’t realise cloud benefits</li>
-  <li>Automate as much as possible</li>
-  <li>Automate toil (work that is manual, repetitive, automatable, tactical, no enduring value) by default, wherever it makes sense</li>
-  <li>Everything is code - application, infra, tests, pipelines</li>
-  <li>Sharing (code, post-mortems, lessons learned)</li>
-  <li>If it hurts, do it frequently</li>
-  <li>Measure everything</li>
-  <li>Architect for failure</li>
-  <li>Graceful degradation</li>
+  <li>Use your cloud provider's API or an open-source tool like <a href="https://terraform.io">Terraform</a>. Brokerage tools often make your task easier in the short term, but limit your maturity in the long term. You want to make sure that any orchestration tool you use to automate your cloud-based systems has support for all of your cloud provider's current services and features, and that new services or features get added to your orchestration tool quickly.</li>
+  <li>Automate <a href="https://landing.google.com/sre/sre-book/chapters/eliminating-toil/">toil</a> by default, wherever it makes sense. 'Toil' in the context of Site Reliability Engineering is work that is manual, repetitive, automatable, tactical, and of no enduring value.</li>
+  <li>Treat everything as code. Not just your application, but your infrastructure, runbooks and deployment pipelines. Keep it all version-controlled with broad test coverage.</li>
+  <li>"If it hurts, do it frequently." If your deployment process takes a long time and is error-prone, try doing deployments more often. This will help you to identify constraints, protect fragile systems, and make processes lean and automated. Remember that the ability to deploy frequently and quickly is <a href="https://puppet.com/resources/whitepaper/state-of-devops-report">an indicator of overall maturity</a>.</li>
+  <li>Measure everything. Take a scientific approach to delivery, forming hypotheses and testing them, then sharing your results with your agency, other agencies, or the world.</li>
+  <li>Architect for failure, assuming that any part of your system might fail at any moment. This could involve deploying across multiple Availability Zones or Regions, or implementing graceful degradation of your system if non-critical parts of suffer from outages.</li>
 </ul>
 
 <h2>Iteration</h2>
+<p>Take an iterative approach to delivery, remembering <a href="https://en.wikipedia.org/wiki/John_Gall_(author)#Gall's_law">Gall's Law</a>:</p>
+<p><em>"A complex system that works is invariably found to have evolved from a simple system that worked. A complex system designed from scratch never works and cannot be patched up to make it work. You have to start over with a working simple system."</em></p>
 <ul>
-  <li>Gradual changes</li>
-  <li>Continuous delivery</li>
-  <li>Automated testing</li>
-</ul>
-
-<h2>Automation</h2>
-<ul>
-  <li>Technical decisions owned by the team</li>
-  <li>The best people who are in a position to decide whether a change should go out are the people who developed it.</li>
+  <li>Continuous delivery is an essential part of an iterative approach. You want deployments to be cheap and repeatable, which requires your deployment process to be fully automated.</li>
+  <li>An automated delivery pipeline requires automated testing to inform users whether their change was successful. Make sure you're testing not just your application code, but your infrastructure and the service that runs on it.</li>
 </ul>
 
 <h2>Production Services</h2>
 <ul>
-  <li>Requires direct access to cloud service API - no brokerage, no ticketing system</li>
-  <li>Real-time monitoring</li>
-  <li>Observability</li>
+  <li>Limit the risk of your production deployments through the use of techniques like <a href="https://martinfowler.com/bliki/CanaryRelease.html">canary releases</a>, <a href="https://martinfowler.com/articles/feature-toggles.html">feature flags</a>, and <a href="https://martinfowler.com/bliki/BlueGreenDeployment.html">blue/green deployments</a>.</li>
+  <li>Decouple and compartmentalise your systems to contain failures. This could be through the use of <a href="https://aws.amazon.com/answers/account-management/aws-multi-account-security-strategy/">separate accounts</a>> for different services or environments, or through the use of <a href="https://martinfowler.com/articles/microservices.html">microservices</a>.</li>
+  <li>As your services get more complex, <a href="https://www.honeycomb.io/blog/observability-a-manifesto/">observability</a> tools can be used to gain insight into your services. <em>"Monitoring is about known-unknowns and actionable alerts, observability is about unknown-unknowns and empowering you to ask arbitrary new questions."</em></li>
+  <li>For complex services, <a href="https://principlesofchaos.org/">chaos engineering</a> can be used to improve system resilience, allowing for increased confidence with high velocity of deployment. This could involve open source tools like Netflix's <a href="https://github.com/netflix/chaosmonkey">Chaos Monkey</a>, or commercial tools like <a href="https://www.gremlin.com/">Gremlin</a>.</li>
 </ul>
 
         </section>
